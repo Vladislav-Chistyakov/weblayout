@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js" defer></script>
+  <title>валидация</title>
+</head>
+
+<body>
+  <!--<div class="container">
+    <form action="" class="form">
+      <input class="input" type="text" name="name" placeholder="Имя" data-validate-field="name">
+      <input class="input" type="tel" name="tel" placeholder="Телефон" data-validate-field="tel"
+        data-validate-rules="phone">
+      <input class="input" type="email" name="email" placeholder="Email" data-validate-field="email">
+      <button type="submit" class="btn">Заказать</button>
+    </form>
+  </div>-->
+  <div class="container">
+
+    <form action="#" id="form" class="form" autocomplete="off">
+      <span class="span-name">Как вас зовут?</span>
+      <input required type="text" class="input input-name form__input form-control" placeholder="Имя*"
+        autocomplete="off." name="name" id="name" />
+
+      <span class="span-num">Укажите ваш телефон</span>
+      <input required class="input input-num form__input form-control" type="tel" name="tel" placeholder="Телефон*"
+        autocomplete="off." data-validate-field="tel" data-validate-rules="phone" id="num">
+
+      <span class="span-email">Укажите ваш e-mail</span>
+      <input required type="email" class="input input-email form__input form-control" placeholder="Email*"
+        autocomplete="off." name="email" id="email" />
+      <button class="btn btn-primary" id="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script src="just-validate.production.min.js"></script>
+  <script src="./inputmask.min.js"></script>
+  <script>
+
+    var selector = document.querySelector("input[type='tel']")
+
+    var im = new Inputmask("+7 (999) 999-99-99")
+
+    im.mask(selector)
+
+    const validation = new JustValidate('#form');
+
+    validation
+      .addField('#name', [
+        {
+          rule: 'minLength',
+          value: 3,
+          errorMessage: 'FDS'
+        },
+        {
+          rule: 'maxLength',
+          value: 30,
+          errorMessage: 'FDS2'
+        },
+        {
+          rule: 'required',
+          value: true,
+          errorMessage: 'Как вас зовут?'
+        },
+      ])
+      .addField('#num', [
+        {
+          rule: 'required',
+          value: true,
+          errorMessage: 'Укажите ваш Телефон'
+        },
+      ])
+      .addField('#email', [
+        {
+          rule: 'email',
+          errorMessage: 'Укажите ваш e-mail',
+        },
+        {
+          rule: 'required',
+          value: true,
+          errorMessage: 'Укажите ваш e-mail'
+        },
+      ]);
+  </script>
+
+
+</body>
+
+</html>

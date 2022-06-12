@@ -1,0 +1,22 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.container {
+  width: 400px;
+  height: 300px;
+  background-color: white;
+}
+
+p {
+  padding: 20px;
+}
+
+.simplebar-scrollbar:before {
+  width: 6px;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background-color:#CCB26E;
+}

@@ -1,0 +1,122 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0, 0, 0, .4);
+  box-sizing: border-box;
+}
+
+.choices[data-type*=select-one] {
+  height: 39px;
+  width: 176px;
+  max-width: 174px;
+}
+
+.choices {
+  width: 174px;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  position: relative;
+  z-index: 10;
+  padding: 10px 16px 11px 16px;
+  border: 1px solid #CCB26E;
+  width: 174px;
+  border-radius: 10px;
+}
+
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  margin-top: 0px;
+  margin-left: -1px;
+}
+
+.is-open {
+  box-sizing: border-box;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  outline: 1px solid #CCB26E !important;
+}
+
+.is-open .choices__list--dropdown, .is-open .choices__list[aria-expanded]  {
+  width: 174px;
+  font-size: 14px;
+  line-height: 19px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 1px solid #CCB26E;
+  border-top: none;
+}
+
+.choices__inner {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  height: 39px;
+  min-height: 0;
+  background-color: #ffffff;
+  /*outline: 1px solid #CCB26E;*/
+  border-radius: 10px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.is-open .choices__inner::after {
+  content: '';
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  height: 10px;
+  width: 13px;
+  background: url('./2.svg') no-repeat;
+}
+
+
+.choices__inner::after {
+  content: '';
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  height: 10px;
+  width: 13px;
+  background: url('./1.svg') no-repeat;
+}
+
+
+
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: #fff;
+}
+
+
+.choices__list--dropdown .choices__item--selectable::after, .choices__list[aria-expanded] .choices__item--selectable::after {
+  content: '';
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 10px;
+  padding-left: 15px;
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable:first-child {
+  padding-top: 20px;
+}
+
+.choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable:last-child {
+  padding-bottom: 20px;
+}
+
+#choices--select-nc-item-choice-1 {
+  padding-top: 20px;
+}
+
+
+.choices__list--single {
+  display: block;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+

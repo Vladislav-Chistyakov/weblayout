@@ -1,0 +1,67 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 40px;
+  padding: 21px 10px 29px 30px;
+  width: 176px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #333;
+}
+
+.label {
+  display: flex;
+  position: relative;
+  padding-left: 21px;
+  cursor: pointer;
+}
+
+.chek {
+  display: none;
+}
+
+.chek + .span {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  transition: border 0.3s ease;
+
+}
+
+.chek + .span::before {
+  content: '';
+  position: absolute;
+  background: url('./Rectangle99.svg')  center center no-repeat;
+  height: 5px;
+  width: 7px;
+  top: 4px;
+  right: 0;
+  left: 3px;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+}
+
+.chek:checked + .span::before{
+  opacity: 1;
+}
+
+.chek:checked + .span{
+  border: 1px solid #CCB26E;
+}

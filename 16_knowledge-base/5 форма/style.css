@@ -1,0 +1,79 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.container {
+  margin: 40px;
+  height: 410px;
+  width: 440px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 38px 30px;
+}
+
+
+.input {
+  margin-bottom: 31px;
+  padding: 17px 20px;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  border-radius: 10px;
+}
+.btn {
+  padding: 18.5px 53px;
+  background-color: #FF5C00;
+  width: fit-content;
+  color: #fff;
+  font-size: 20px;
+  line-height: 23px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+
+.just-validate-error-label {
+  display: none;
+}
+
+.span-name {
+  display: none;
+  color: red;
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.span-num {
+  display: none;
+  color: red;
+  position: absolute;
+  top: 102px;
+  left: 50px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.span-email {
+  display: none;
+  position: absolute;
+  top: 187px;
+  left: 50px;
+  color: red;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.block {
+  display: block;
+}

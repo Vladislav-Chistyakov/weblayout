@@ -1,0 +1,38 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.container {
+  background-color: #fff;
+  margin: 40px;
+  width: 375px;
+}
+
+.text {
+  color: #333;
+  padding: 28px 20px;
+  width: 280px;
+}
+
+.icon {
+  display: inline-block;
+  line-height: 16px;
+  height: 16px;
+}
+
+.icon:hover svg path{
+  fill:#CCB26E;
+}
+
+.tippy-box {
+  background-color:#666666;
+  color: #fff;
+  border-radius: 0;
+}
+
+.tippy-arrow {
+  background-color: #666666;
+  color: #666666;
+}
+
